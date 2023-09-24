@@ -1,0 +1,50 @@
+html {
+    background-color:cornflowerblue;
+    box-sizing: border-box;
+}
+
+#container {
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: 30vw;
+    margin: auto;
+   
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 70%;
+    
+}
+#display{
+    background-color: dimgrey;
+    height: 30%;
+    border-radius: 20px;
+    text-align: right;
+    font-size: 100px;
+}
+
+button {
+    width: 25%;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+button:active {
+    background-color: bisque;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px)
+}
+
+#zero {
+    width: 50%;
+} 
+
+
+
+
+
