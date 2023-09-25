@@ -6,27 +6,27 @@ const clear = document.getElementById('clear');
 
 
 
-let currentDisplay = [];
-let tempResult = [];
-
-let arrayOne = [];
-let arrayTwo = [];
-let oporation = []
+let tempValue = "0";
+let tempValueTwo = one;
+let calculated = "";
 
 
 const calculate = () => {
-    console.log(arrayOne);
-    console.log(arrayTwo);
-    console.log(oporation);
+    
 
 }
 
+const calculateAdd = () => {
 
+   
+
+}
 
 
 clear.addEventListener('click', (x) => {
     currentDisplay = [];
     display.innerHTML = "0";
+    tempValue = '0';
 });
 
 
@@ -35,29 +35,49 @@ equels.addEventListener('click', calculate);
 
 button.addEventListener('click', (e) => {
     if(e.target.classList.contains('number')) {
+        
+        const keyContent = e.target.textContent;
+        
+        
+        if(display.textContent === '0' || tempValueTwo.classList.contains('oporation')){
+            display.textContent = keyContent;
+            
+        } else {
+            
+            display.textContent = display.textContent + keyContent;
+            tempValue = keyContent;
+
+            
+            
+        }
        
-        
-        
-        currentDisplay.push(e.target.innerHTML);
-        display.innerHTML = currentDisplay.join("");
     }
 
-    let sum = 0
+    
     if(e.target.classList.contains('oporation')){
-        if(arrayTwo === ""){
-            arrayTwo.push(0);
-            oporation.push(e.target.innerHTML);
-            return calculate();
+
+        
+        if(e.target.textContent === "+"){
+            
+            tempValueTwo = e.target;
+            
+            calculated = Number(tempValue) + Number(display.textContent);
+            
+            display.textContent = calculated;
+
+            
+            console.log(tempValue);
+            console.log(calculated);
+            console.log(display.textContent);
+
+
+
+
         } else {
-            oporation.push(e.target.innerHTML);
-            return calculate();
+            console.log('frog');
         }
         
-       
-
-        
-
-
+    
     }
   }
   );
